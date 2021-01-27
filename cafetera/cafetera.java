@@ -8,7 +8,7 @@ public class cafetera {
 	
 	// Constructor predeterminado
 	public cafetera() {
-		this.capacidadMaxima = 1000;
+		this.capacidadMaxima = 2500;
 		this.cantidadActual = 0;
 	}
 	
@@ -36,16 +36,16 @@ public class cafetera {
 	
 	// Metodos
 	public void llenarCafetera() {
-		cantidadActual = capacidadMaxima;
+		this.cantidadActual = this.capacidadMaxima;
 	}
 	
 	public void servirTaza(int taza) {
 		taza = 50;
 		
-		if(cantidadActual < 50) {
+		if(cantidadActual < taza) {
 			cantidadActual = 0;
 		}else {
-			cantidadActual = cantidadActual - 50;
+			cantidadActual = cantidadActual - taza;
 		}
 	}
 	
